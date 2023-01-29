@@ -27,7 +27,12 @@ int Dig(int number1, int number2)
     {          
         if (number2 > 0)
         {
-            number = (int)Math.Pow(number1, number2);
+            // number = (int)Math.Pow(number1, number2);
+            number = 1;
+            for(int i = 1; i <= number2; i++)
+            {
+                number = number * number1; 
+            }
             break;
         }
         else
