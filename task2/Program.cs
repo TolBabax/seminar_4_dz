@@ -20,7 +20,6 @@ int IntupNumber(string str)
     }
     return number;
 }
-
 int Sum(string array)
 {
     int sum = 0;
