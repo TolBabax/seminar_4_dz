@@ -20,13 +20,18 @@ int IntupNumber(string str)
     return number;
 }
 
-int[] array = new int[8];
-
-for (int i = 0; i <= 7; i++)
+void PrintArray(int[] arr)
 {
-    int number = IntupNumber("Введите цифру массива: ");
-    array[i] = number;
+    int count = arr.Length;
+    for (int i = 0; i < count; i++)
+    {
+        int number = IntupNumber($"Введите {i} цифру массива: ");
+        arr[i] = number;
+    }
+    System.Console.WriteLine();
 }
 
+int[] array = new int[8];
 
-System.Console.WriteLine("[" + string.Join(", ", array) + "]");
+PrintArray(array);
+System.Console.WriteLine("Массив: " + "[" + string.Join(", ", array) + "]");
